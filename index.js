@@ -131,6 +131,8 @@ const Geojson = props => {
               strokeColor={props.strokeColor}
               fillColor={props.fillColor}
               strokeWidth={props.strokeWidth}
+              onPress={props.onPress}
+              tappable={props.onPress!==undefined}
             />
           );
         }
