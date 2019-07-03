@@ -143,6 +143,8 @@ const Geojson = props => {
               coordinates={overlay.coordinates}
               strokeColor={props.strokeColor}
               strokeWidth={props.strokeWidth}
+              onPress={props.onPress}
+              tappable={props.onPress!==undefined}
             />
           );
         }
