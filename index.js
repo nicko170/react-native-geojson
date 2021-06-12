@@ -119,7 +119,11 @@ const Geojson = props => {
               key={overlay.id}
               coordinate={overlay.coordinates}
               pinColor={props.pinColor}
-            />
+            >
+                {props.callout!==undefined && <MapView.Callout>
+                  props.callout(overlay)
+                </MapView.Callout>}
+            </MapView.Marker>
           );
         }
         if (overlay.type === 'polygon') {
